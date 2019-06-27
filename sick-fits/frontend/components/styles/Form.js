@@ -1,14 +1,14 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const loading = keyframes`
   from {
     background-position: 0 0;
-    /* rotate: 0; */
+    rotate: 0;
   }
 
   to {
     background-position: 100% 100%;
-    /* rotate: 360deg; */
+    rotate: 360deg;
   }
 `;
 
@@ -37,7 +37,7 @@ const Form = styled.form`
     }
   }
   button,
-  input[type='submit'] {
+  input[type="submit"] {
     width: auto;
     background: red;
     color: white;
@@ -55,11 +55,16 @@ const Form = styled.form`
     }
     &::before {
       height: 10px;
-      content: '';
+      content: "";
       display: block;
-      background-image: linear-gradient(to right, #ff3019 0%, #e2b04a 50%, #ff3019 100%);
+      background-image: linear-gradient(
+        to right,
+        #ff3019 0%,
+        #e2b04a 50%,
+        #ff3019 100%
+      );
     }
-    &[aria-busy='true']::before {
+    &[aria-busy="true"]::before {
       background-size: 50% auto;
       animation: ${loading} 0.5s linear infinite;
     }
