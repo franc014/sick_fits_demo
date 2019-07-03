@@ -24,6 +24,7 @@ class Signin extends Component {
       <Mutation mutation={REQUEST_RESET_MUTATION} variables={this.state}>
         {(reset, { error, loading, called }) => (
           <Form
+            data-test="form"
             method="post"
             onSubmit={async e => {
               e.preventDefault();
@@ -59,3 +60,4 @@ class Signin extends Component {
 }
 
 export default Signin;
+export { REQUEST_RESET_MUTATION };

@@ -6,14 +6,14 @@ import Error from "./ErrorMessage";
 
 const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION(
-    $email: String!
     $name: String!
+    $email: String!
     $password: String!
   ) {
-    signUp(email: $email, name: $name, password: $password) {
+    signUp(name: $name, email: $email, password: $password) {
       id
-      email
       name
+      email
     }
   }
 `;
@@ -21,8 +21,8 @@ const SIGNUP_MUTATION = gql`
 class Signup extends Component {
   state = {
     name: "",
-    password: "",
-    email: ""
+    email: "",
+    password: ""
   };
   saveToState = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -84,3 +84,4 @@ class Signup extends Component {
 }
 
 export default Signup;
+export { SIGNUP_MUTATION };
