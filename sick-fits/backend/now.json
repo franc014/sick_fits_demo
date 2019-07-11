@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "name": "Sick Fits Back End",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "src/index.js"
+    }
+  ],
+  "env": {
+    "FRONTEND_URL": "http://localhost:7777",
+    "PRISMA_ENDPOINT": "https://us1.prisma.sh/juan-francisco-andrade-cc51cd/sick-fits/dev",
+    "PRISMA_SECRET": "b2324e02ec1534160272558ecf7883a4f360d5ec",
+    "PRISMA_MANAGEMENT_API_SECRET": "e754a9cb145ca041488231b2592559873f0c4037",
+    "APP_SECRET": "jwtsecret123",
+    "STRIPE_SECRET": "sk_test_xr4zcGjx8o6U3WrqKuQqUtfz",
+    "PORT": "4444",
+    "MAIL_HOST": "smtp.mailtrap.io",
+    "MAIL_PORT": "2525",
+    "MAIL_USER": "338108fb4fe3cbab0",
+    "MAIL_PASSWORD": "d825774a9eb259"
+  }
+}
